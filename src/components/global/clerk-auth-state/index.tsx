@@ -1,0 +1,41 @@
+import {
+  ClerkLoading,
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/nextjs";
+import { User } from "lucide-react";
+import Spinner from "../loader";
+import { Button } from "@/components/ui/button";
+
+type Props = {};
+
+const ClerkAuthState = ({}: Props) => {
+  return (
+    <>
+      <ClerkLoading>
+        <Spinner state>
+          <></>
+        </Spinner>
+      </ClerkLoading>
+      <SignedOut>
+        <SignInButton>
+          <Button className="rounded-xl bg-[#252525] text-white hover:bg-[#252525]/70">
+            <User /> Login
+          </Button>
+        </SignInButton>
+      </SignedOut>
+      <SignInButton>
+        <UserButton>
+          <UserButton.UserProfileLink
+            label="Dashboard"
+            url={`/dashboard`}
+            labelIcon={<User size={16} />}
+          />
+        </UserButton>
+      </SignInButton>
+    </>
+  );
+};
+export default ClerkAuthState;
