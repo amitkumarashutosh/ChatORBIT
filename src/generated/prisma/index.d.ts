@@ -12010,16 +12010,16 @@ export namespace Prisma {
     id?: string
     clerkId?: string
     email?: string
-    firstName?: string
     AND?: UserWhereInput | UserWhereInput[]
     OR?: UserWhereInput[]
     NOT?: UserWhereInput | UserWhereInput[]
+    firstName?: StringNullableFilter<"User"> | string | null
     lastName?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
     subscription?: XOR<SubscriptionNullableScalarRelationFilter, SubscriptionWhereInput> | null
     intergrations?: IntegrationListRelationFilter
     automations?: AutomationListRelationFilter
-  }, "id" | "clerkId" | "email" | "firstName">
+  }, "id" | "clerkId" | "email">
 
   export type UserOrderByWithAggregationInput = {
     id?: SortOrder
