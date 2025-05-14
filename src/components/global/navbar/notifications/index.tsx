@@ -1,0 +1,12 @@
+import { Button } from "@/components/ui/button";
+import { Bell } from "lucide-react";
+
+const Notifications = () => {
+  return (
+    <Button className="bg-white rounded-full py-6">
+      <Bell color="3353CC" fill="#3353CC" />
+    </Button>
+  );
+};
+
+export default Notifications;
